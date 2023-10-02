@@ -1,0 +1,127 @@
+body {
+  height: 100vh;
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#btn,
+#btn2 {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #eaeaea;
+  color: #0b2239;
+  border-radius: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#btn:hover {
+  background-color: red;
+  color: white;
+}
+.container {
+  background-color: #0b2239;
+  min-width: 1536px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.heading {
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sec1 {
+  flex-grow: 7;
+  margin-top: 35px;
+}
+.bi-bell-fill,
+.bi-person-circle,
+.bi-gear-fill,
+.bi-people-fill,
+.bi-123,
+.bi-box-fill,
+.bi-receipt,
+.bi-house-fill {
+  color: white;
+  font-weight: bold;
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.user-row {
+  margin-bottom: 14px;
+}
+
+.table-user-information > tbody > tr {
+  border-top: 1px solid #ccc;
+}
+
+.table-user-information > tbody > tr:first-child {
+  border-top: 0;
+}
+
+.table-user-information > tbody > tr > td {
+  border-top: 0;
+}
+
+.panel {
+  width: 600px;
+  height: 450px;
+  border: 1px solid #0b2239;
+  padding: 10px 10px;
+  margin-top: 20px auto;
+
+  margin-left: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 4px;
+}
+.panel-title {
+  padding-left: 7px;
+  font-size: 27px;
+  font-weight: 700;
+}
+.accept-deny {
+  margin-top: 30px;
+}
+a {
+  text-decoration: none;
+}
+.accept {
+  color: #fff;
+  background: #44cc44;
+  padding: 15px 20px;
+  box-shadow: 0 4px 0 0 #2ea62e;
+}
+.accept:hover {
+  background: #6fe76f;
+  box-shadow: 0 4px 0 0 #7ed37e;
+}
+.deny {
+  color: #fff;
+  background: tomato;
+  padding: 15px 20px;
+  box-shadow: 0 4px 0 0 #cb4949;
+}
+.deny:hover {
+  background: rgb(255, 147, 128);
+  box-shadow: 0 4px 0 0 #ef8282;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="/css/worker-homepage.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="sec1">
+          <p class="heading">Welcome worker</p>
+        </div>
+        <div>
+          <a id="btn2" href="http://localhost:3000/worker/request/"
+            >My request</a
+          >
+
+          <button id="btn">Logout</button>
+        </div>
+      </div>
+    </header>
+    <form action="/worker/postworkerform" method="post">
+      <select class="custom-select" name="selectOption" id="selected">
+        <option value="" selected>Please select an option</option>
+        <option value="absence">absence</option>
+        <option value="vacation">vacation</option>
+      </select>
+      <br /><br />
+      <input type="submit" class="button" value="select" />
+    </form>
+  </body>
+  <script src="/js/requestprossesing.js"></script>
+</html>

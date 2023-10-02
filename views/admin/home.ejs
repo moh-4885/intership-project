@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="/css/adminstratorhomepage.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="sec1">
+          <p class="heading">Welcome worker</p>
+        </div>
+        <div>
+          <button id="btn">Logout</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <% for (let req of request){%>
+      <a href="/admin/request/<%=req._id%>" class="request">
+        <h3><%=req.type%> request</h3>
+        <div class="information">
+          <div class="information-data">
+            <h4>Name :</h4>
+            <p><%=req.user.name%></p>
+          </div>
+          <div class="information-data">
+            <h4>For :</h4>
+            <p><%=req.absenceDate%></p>
+          </div>
+        </div>
+      </a>
+      <% }%>
+    </main>
+  </body>
+  <script src="/js/requestprossesing.js"></script>
+</html>

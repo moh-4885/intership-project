@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leaveforme</title>
+    <link rel="stylesheet" href="/css/leavingform.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="sec1">
+          <p class="heading">Welcome worker</p>
+        </div>
+        <div>
+          <button id="btn">Logout</button>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper">
+      <div class="information">
+        <h1 classe="name"><%=name%></h1>
+        <p>Create and view leave application</p>
+      </div>
+      <div class="leaveForm">
+        <form action="/worker/addrequest" method="post">
+          <% if (formType=="absence"){%>
+          <div class="leaveform--element">
+            <span class="title">Absenca Day</span>
+            <input type="date" name="absenceDate" />
+          </div>
+          <div class="leaveform--element">
+            <span class="title">Start Hour</span>
+            <input type="time" name="startHour" />
+          </div>
+          <div class="leaveform--element">
+            <span class="title">End Hour</span>
+            <input type="time" name="endHour" />
+          </div>
+          <div class="leaveform--element">
+            <span class="title">Comment</span>
+            <input
+              type="text"
+              placeholder="add comment here"
+              name="motifabsense"
+            />
+          </div>
+          <% }else {%>
+          <div class="leaveform--element">
+            <span class="title">Start Date</span>
+            <input type="date" name="absenceDate" />
+          </div>
+          <div class="leaveform--element">
+            <span class="title">End Date</span>
+            <input type="date" name="startHour" />
+          </div>
+          <div class="leaveform--element">
+            <span class="title">Nature of the vacation</span>
+            <select class="vacation-nature" name="endHour" id="">
+              <option value="annual">Annual</option>
+              <option value="relica">Releca</option>
+            </select>
+          </div>
+          <div class="leaveform--element">
+            <span class="title">Address</span>
+            <input
+              type="text"
+              placeholder="add the vacation address"
+              name="motifabsense"
+            />
+          </div>
+          <% } %>
+          <input type="hidden" name="type" value="<%=formType%>" />
+
+          <input class="button" type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="/js/requestprossesing.js"></script>
+</html>
